@@ -25,9 +25,8 @@ public class EchoController {
         return response;
     }
 
-    // Default route
     @GetMapping("/")
     public String home() {
-        return "Welcome to the Echo API! Access /api/echo for API usage.";
+        return "Welcome to the Echo API! Use /api/echo for GET and POST requests.";
     }
 }

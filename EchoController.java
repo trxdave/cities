@@ -1,3 +1,5 @@
+package com.example.api;
+
 import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -21,5 +23,10 @@ public class EchoController {
         response.put("message", request.get("message"));
         response.put("timestamp", LocalDateTime.now().toString());
         return response;
+    }
+
+    @GetMapping("/")
+    public String home() {
+        return "Welcome to the Echo API! Use /api/echo for GET and POST requests.";
     }
 }
